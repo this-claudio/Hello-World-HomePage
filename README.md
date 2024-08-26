@@ -19,8 +19,8 @@ Uma breve descrição da sua aplicação. Descreva o propósito e as funcionalid
 ### Clonando o Repositório
 
 ```bash
-git clone https://seu-repositorio-url.git
-cd seu-repositorio
+git clone https://github.com/this-claudio/Api-Hello-World
+cd Api-Hello-World
 ```
 
 ### Executando a Aplicação
