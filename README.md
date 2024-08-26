@@ -19,7 +19,7 @@ Uma Home Page de Hello World para testar containers e servidores.
 ### Clonando o Repositório
 
 ```bash
-git clone https://github.com/this-claudio/Api-Hello-World
+git clone https://github.com/this-claudio/Hello-World-HomePage
 cd Api-Hello-World
 ```
 
