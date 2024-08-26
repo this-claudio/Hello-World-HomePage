@@ -1,6 +1,15 @@
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar o Serilog para registrar em um arquivo
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information() // Define o nível mínimo de log
+    .WriteTo.File(@"logs\log.txt", rollingInterval: RollingInterval.Day) // Define o arquivo de log
+    .WriteTo.Console()
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // Substitui o logging padrão pelo Serilog
 
 // Add services to the container.
 

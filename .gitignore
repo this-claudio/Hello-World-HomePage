@@ -27,6 +27,7 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
+HelloWorldWebApp/logs/
 .vs/
 #Nuget packages folder
 packages/

@@ -28,13 +28,6 @@ namespace HelloWorldWebApplication.Controllers
 
         [HttpGet()]
         [Route("home")]
-        public IActionResult Get()
-        {
-            _logger.LogInformation($"[{DateTime.Now}] Get / redirect to /home");
-            return GetHome();
-        }
-
-        [HttpGet()]
         public IActionResult GetHome()
         {
             _logger.LogInformation($"[{DateTime.Now}] Get /home");
@@ -48,6 +41,13 @@ namespace HelloWorldWebApplication.Controllers
             {
                 return NotFound();
             }
+        }
+
+        [HttpGet()]
+        public IActionResult Get()
+        {
+            _logger.LogInformation($"[{DateTime.Now}] Get / redirect to /home");
+            return Redirect("/home");                       
         }
     }
 
