@@ -1,6 +1,4 @@
-Aqui está um exemplo de um README.md para a sua aplicação ASP.NET Core, incluindo a descrição das rotas disponíveis.
-
-# Nome da Aplicação
+# Hello World Web App
 
 Uma breve descrição da sua aplicação. Descreva o propósito e as funcionalidades principais que ela oferece.
 
