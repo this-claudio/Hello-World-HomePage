@@ -1,6 +1,6 @@
 # Hello World Web App
 
-Uma breve descrição da sua aplicação. Descreva o propósito e as funcionalidades principais que ela oferece.
+Uma Home Page de Hello World para testar containers e servidores.
 
 ## Tecnologias Utilizadas
 
