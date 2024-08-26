@@ -43,7 +43,17 @@ cd Api-Hello-World
 
 #### Via Docker
 
-Se você estiver utilizando Docker, você pode construir e executar a imagem:
+Se você estiver utilizando Docker, você pode executar a imagem:
+
+1. Execute o contêiner:
+
+   ```bash
+   docker run -p 80:80 -d thisclaudio/hello-world-app:v1
+   ```
+
+#### Docker Build
+
+Se você estiver utilizando Docker, você pode construir e executar a sua prórpia imagem:
 
 1. Construa a imagem:
 
