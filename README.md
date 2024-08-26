@@ -1,6 +1,5 @@
 Aqui está um exemplo de um README.md para a sua aplicação ASP.NET Core, incluindo a descrição das rotas disponíveis.
 
-```markdown
 # Nome da Aplicação
 
 Uma breve descrição da sua aplicação. Descreva o propósito e as funcionalidades principais que ela oferece.
@@ -93,6 +92,8 @@ Se você estiver utilizando Docker, você pode construir e executar a imagem:
 ## Documentação da API
 
 A documentação da API está disponível através do Swagger. Após executar a aplicação, você pode acessá-la em:
+
+> Funciona apenas no ambiente de Desenvolvimento
 
 ```
 http://localhost:80/swagger
