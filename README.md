@@ -21,7 +21,6 @@ Uma Home Page de Hello World para testar containers e servidores.
 ```bash
 git clone https://github.com/this-claudio/Hello-World-HomePage
 cd Hello-World-HomePage
-
 ```
 
 ### Executando a Aplicação
