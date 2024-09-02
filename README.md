@@ -45,10 +45,24 @@ cd Hello-World-HomePage
 
 Se você estiver utilizando Docker, você pode executar a imagem:
 
+* Para ambiente `Windows`:
 1. Execute o contêiner:
 
    ```bash
-   docker run -p 80:80 -d thisclaudio/hello-world-app:v1
+   docker run -p 80:80 -d thisclaudio/hello-world-app:v1_amd64w
+   ```
+
+* Para ambiente `Linux` ou `WSL`:
+1. Execute o contêiner:
+
+   ```bash
+   docker run -p 80:80 -d thisclaudio/hello-world-app:v1_amd64
+   ```
+* Para ambiente `Linux ARM` ou `RaspberryPi`:
+1. Execute o contêiner:
+
+   ```bash
+   docker run -p 80:80 -d thisclaudio/hello-world-app:v1_arm64
    ```
 
 #### Docker Build
