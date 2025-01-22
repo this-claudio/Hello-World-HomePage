@@ -1,4 +1,6 @@
-using HelloWorld.Model;
+using HelloWorldApp.Extentions;
+using HelloWorldApp.Model;
+using HelloWorldApp.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HelloWorldWebApplication.Controllers
@@ -24,6 +26,25 @@ namespace HelloWorldWebApplication.Controllers
         {
             _logger.LogInformation($"[{DateTime.Now}] Get /Status");
             return new StatusModel(Environment.MachineName, Environment.OSVersion.VersionString, true, System.Diagnostics.Process.GetCurrentProcess().Id.ToString());
+        }
+
+        [HttpGet()]
+        [Route("info")]
+        public InfoModel GetInfo()
+        {
+            _logger.LogInformation($"[{DateTime.Now}] Get /Info");
+            var cpuUsage = DiagnosticService.GetCpuUsage();
+            var memoryInfo = DiagnosticService.GetMemoryInfo();
+            var storageInfo = DiagnosticService.GetStorageInfo();
+
+            return new InfoModel
+            {
+                CpuUsage = $"{cpuUsage:F2} %",
+                MemoryTotal = memoryInfo.total.FormatBytes(),
+                MemoryUsed = memoryInfo.used.FormatBytes(),
+                StorageTotal = storageInfo.total.FormatBytes(),
+                StorageUsed = storageInfo.used.FormatBytes()
+            };
         }
 
         [HttpGet()]

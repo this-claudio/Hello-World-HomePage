@@ -1,4 +1,4 @@
-﻿namespace HelloWorld.Model
+﻿namespace HelloWorldApp.Model
 {
     public class StatusModel
     {
@@ -15,6 +15,6 @@
         public bool IsRunning { get; set; }
         public string ProcessCode { get; set; }
 
-        
+
     }
 }

@@ -52,17 +52,11 @@ Se você estiver utilizando Docker, você pode executar a imagem:
    docker run -p 80:80 -d thisclaudio/hello-world-app:v1_amd64w
    ```
 
-* Para ambiente `Linux` ou `WSL`:
+* Para ambiente `Linux` ou `WSL/RaspberryPi`:
 1. Execute o contêiner:
 
    ```bash
-   docker run -p 80:80 -d thisclaudio/hello-world-app:v1_amd64
-   ```
-* Para ambiente `Linux ARM` ou `RaspberryPi`:
-1. Execute o contêiner:
-
-   ```bash
-   docker run -p 80:80 -d thisclaudio/hello-world-app:v1_arm64
+   docker run -p 80:80 -d thisclaudio/hello-world-app:latest
    ```
 
 #### Docker Build
