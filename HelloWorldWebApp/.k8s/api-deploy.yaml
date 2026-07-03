@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  app-hello
+  namespace: quality
+  labels:
+    app:  app-hello
+spec:
+  selector:
+    matchLabels:
+      app: app-hello
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app:  app-hello
+    spec:
+      # initContainers:
+        # Init containers are exactly like regular containers, except:
+          # - Init containers always run to completion.
+          # - Each init container must complete successfully before the next one starts.
+      containers:
+      - name: app-hello-pod
+        image: "thisclaudio/hello-world-app:latest"
+        ports:
+        - containerPort:  80
+          name:  http
+      restartPolicy: Always

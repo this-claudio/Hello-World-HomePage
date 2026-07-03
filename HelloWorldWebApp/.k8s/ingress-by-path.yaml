@@ -1,0 +1,26 @@
+  apiVersion: traefik.io/v1alpha1
+  kind: Middleware
+  metadata:
+    name: strip-app-hello
+    namespace: quality
+  spec:
+    stripPrefix:
+      prefixes:
+        - /app-hello
+  ---
+  apiVersion: traefik.io/v1alpha1
+  kind: IngressRoute
+  metadata:
+    name: app-hello-route
+    namespace: quality
+  spec:
+    entryPoints:
+      - web
+    routes:
+      - match: PathPrefix(`/app-hello`)      # era Host(`hello.lab.local`)
+        kind: Rule
+        middlewares:
+          - name: strip-app-hello            # remove /app-hello antes do service
+        services:
+          - name: app-hello-service
+            port: 80

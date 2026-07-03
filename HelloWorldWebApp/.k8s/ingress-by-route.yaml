@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: app-hello-route
+  namespace: quality
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`hello.lab.local`)
+      kind: Rule
+      services:
+        - name: app-hello-service
+          port: 80
